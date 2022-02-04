@@ -4,7 +4,7 @@ version: 0.2.0
 authors:
 - Ehsan Iran-Nejad
 description: BIM360 File Locker For Rhino
-url: https://developer.rhino3d.com
+url: https://github.com/eirannejad/BIM360FileLockerForRhino
 keywords:
     - revit
     - bim360
