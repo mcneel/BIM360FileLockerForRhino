@@ -6,7 +6,8 @@ authors:
 description: BIM360 File Locker For Rhino
 url: https://github.com/eirannejad/BIM360FileLockerForRhino
 keywords:
-    - revit
-    - bim360
-    - autodesk
-    - connector
+- revit
+- bim360
+- autodesk
+- connector
+platform: win
