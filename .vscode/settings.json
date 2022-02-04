@@ -1,0 +1,9 @@
+{
+    "omnisharp.defaultLaunchSolution": "ADC.csproj",
+    "editor.formatOnSave": false,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/.vs": true,
+    },
+}
