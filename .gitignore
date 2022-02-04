@@ -348,3 +348,12 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# macos artifacts
+.DS_Store
+
+# yak stuff
+dist/*.dll
+dist/*.rhp
+dist/*.pdb
+dist/*.yak

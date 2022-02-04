@@ -1,0 +1,12 @@
+---
+name: BIM360FileLockerForRhino
+version: 0.2.0
+authors:
+- Ehsan Iran-Nejad
+description: BIM360 File Locker For Rhino
+url: https://developer.rhino3d.com
+keywords:
+    - revit
+    - bim360
+    - autodesk
+    - connector
