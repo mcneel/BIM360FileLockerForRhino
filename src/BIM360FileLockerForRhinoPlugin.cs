@@ -32,6 +32,11 @@ namespace BIM360FileLockerForRhino
 
         static void Log(Exception exception) => Log(exception.ToString());
 
+        static void Report(string message)
+        {
+            RhinoApp.WriteLine($"[{PluginName}] {message}");
+        }
+
         ADC _adc = default;
 
         protected override LoadReturnCode OnLoad(ref string errorMessage)
@@ -50,13 +55,13 @@ namespace BIM360FileLockerForRhino
                 // we are gonna handle file locking using these events
                 SubscribeToGrasshopperChanges();
 
-                Log("Successfully connected to ADC");
+                Report("Successfully connected to ADC");
 
                 return LoadReturnCode.Success;
             }
             catch (Exception e)
             {
-                RhinoApp.WriteLine($"Error loading File locker {e}");
+                Report($"Error loading File locker {e}");
                 errorMessage = e.ToString();
                 return LoadReturnCode.ErrorNoDialog;
             }
@@ -193,12 +198,12 @@ namespace BIM360FileLockerForRhino
 
         void NotifyLocked(string filePath)
         {
-            RhinoApp.WriteLine($"{PluginName}: Locked \"{Path.GetFileName(filePath)}\"");
+            Report($"Locked \"{Path.GetFileName(filePath)}\"");
         }
 
         void NotifyUnLocked(string filePath)
         {
-            RhinoApp.WriteLine($"{PluginName}: UnLocked \"{Path.GetFileName(filePath)}\"");
+            Report($"UnLocked \"{Path.GetFileName(filePath)}\"");
         }
 
         void ReadOnlyFile(string filePath)
