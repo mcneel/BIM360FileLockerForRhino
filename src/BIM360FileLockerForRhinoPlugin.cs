@@ -141,7 +141,7 @@ namespace BIM360FileLockerForRhino
                     {
                         return Task.Run(() =>
                         {
-                            LockFile(filePath, setReadOnly: true);
+                            LockFile(filePath);
                             NotifyLocked(filePath);
                         });
                     }
@@ -224,14 +224,11 @@ namespace BIM360FileLockerForRhino
             }
         }
 
-        void LockFile(string filePath, bool setReadOnly = false)
+        void LockFile(string filePath)
         {
             Log($"Locking {filePath}");
             if (!_adc.LockFile(filePath))
                 Log($"Failed locking {filePath}");
-            else if (setReadOnly)
-            {
-            }
         }
 
         void UnlockFile(string filePath)
