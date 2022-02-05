@@ -2,28 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Yak Package",
-            "type": "shell",
-            "command": "yak",
-            "args": [
-                "build",
-                "--platform win",
-            ],
-            "options": {
-                "cwd": "dist",
-            },
-            "dependsOn": "Build",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": "$msCompile",
-            "presentation": {
-                "reveal": "silent",
-                "clear": true
-            },
-        },
-        {
             "label": "Build",
             "type": "shell",
             "command": "dotnet",
@@ -32,12 +10,35 @@
                 "/p:Configuration=\"${input:configuration}\"",
                 "${workspaceFolder}/BIM360FileLockerForRhino.sln"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "problemMatcher": "$msCompile",
             "presentation": {
                 "reveal": "silent",
                 "clear": true
             }
+        },
+        {
+            "label": "Build Yak Package",
+            "type": "shell",
+            "command": "yak",
+            "args": [
+                "build",
+                "--platform",
+                "win",
+            ],
+            "group": "build",
+            "options": {
+                "cwd": "dist",
+            },
+            "dependsOn": "Build",
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "reveal": "silent",
+                "clear": true
+            },
         }
     ],
     "inputs": [
@@ -49,7 +50,7 @@
                 "Debug",
                 "Release",
             ],
-            "default": "Release"
+            "default": "Debug"
         }
     ]
 }

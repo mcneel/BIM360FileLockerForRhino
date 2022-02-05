@@ -1,14 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <PlatformTarget>x64</PlatformTarget>
-    <Version>0.2.0</Version>
     <Title>BIM360FileLockerForRhino</Title>
     <Description>Description of BIM360FileLockerForRhino</Description>
     <TargetExt>.rhp</TargetExt>
-    <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
-    <Platforms>x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,9 +21,5 @@
     <StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
     <StartArguments></StartArguments>
     <StartAction>Program</StartAction>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="$(Configuration) == 'Release'">
-    <OutputPath>..\dist</OutputPath>
   </PropertyGroup>
 </Project>
