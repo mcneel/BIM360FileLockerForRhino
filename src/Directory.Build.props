@@ -6,7 +6,7 @@
 
   <PropertyGroup>
     <!-- also change dist/manifest.yml -->
-    <Version>0.3.0</Version>
+    <Version>0.3.0-beta</Version>
     <TargetFramework>net48</TargetFramework>
     <PlatformTarget>x64</PlatformTarget>
     <Platforms>x64</Platforms>
